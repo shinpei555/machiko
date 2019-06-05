@@ -1,0 +1,15 @@
+@import "bootstrap";
+@import 'font-awesome';
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
+@import "color";
+/* ここからscssファイル */
+@import "config/top";
+@import "config/common";
+@import "users/sign_up";
+@import "users/sign_in";
+@import "users/common";
+@import "users/show";
+@import "users/edit";
+
+@import "jTinder";

@@ -1,0 +1,63 @@
+.loginPage {
+  background-image: url("5.jpg");
+  background-size: cover;
+  width: 100vw;
+  &_contents {
+    height: calc(100vh - 80px);
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-between;
+    text-align: center;
+    &_title {
+      padding-top: 30vh;
+      font-weight: bold;
+      font-size: 35px;
+      font-family: 'Francois One', sans-serif;
+      font-family: 'Indie Flower', cursive;
+      font-family: 'Rubik', sans-serif;
+      font-family: 'Fredoka One', cursive;
+      color: #fff;
+      text-shadow:2px 2px 3px #003300;
+    }
+    &_btn {
+      display: block;
+      max-width: 400px;
+      padding: 20px;
+      margin: 50px auto;
+      border-radius: 50px;
+      background: $main-text-color;
+      color: $main-color;
+      transition: 1.0s;
+      border: 3px solid $main-color;
+      i {
+        font-weight: bold;
+      }
+      &:hover {
+        background-color: $main-color;
+        color: $main-text-color;
+        transition: 1.0s;
+      }
+    }
+  }
+}
+.page2 {
+    padding: 0;
+    margin: 0;
+  .contents {
+    width: 100vw;
+    height: 100vh;
+    .content {
+      background-color: #FFCCFF;
+      height: 30%;
+      width: 300px;
+      margin: 30px 40px;
+      float: left;
+      .content-image {
+        height: 100%;
+        width: 100%;
+        background-image: url("1.jpg");
+      }
+    }
+  }
+
+}

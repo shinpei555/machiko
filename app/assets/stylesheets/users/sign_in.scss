@@ -1,0 +1,38 @@
+.signinPage {
+  margin-top: 10vh;
+  .title {
+    color:$main-color;
+    margin: 20px 0;
+    text-align: center;
+  }
+  .userIcon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: $main-color;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loginBtn {
+    padding: 12px;
+    width: 200px;
+    border-radius: 21px;
+    background: $main-color;
+    color: $main-text-color;
+    text-align: center;
+    border: none;
+    margin-top: 20px;
+    opacity: 1;
+    transition: 1.0s;
+    cursor: pointer;
+    &:hover {
+      background: $main-text-color;
+      color: $main-color;
+      border: 2px solid $main-color;
+      transition: 1.0s;
+    }
+  }
+}

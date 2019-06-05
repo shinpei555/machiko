@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Machiko</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Fredoka+One|Indie+Flower|Rubik&display=swap" rel="stylesheet">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+      <div class="alert alert-info"><%= flash[:notice] %></div>
+    <% end %>
+    <% if flash[:alert] %>
+      <div class="alert alert-danger"><%= flash[:alert] %></div>
+    <% end %>
+
+    <header>
+      <div class="nav-bar">
+        <div class="header-logo">
+          <h1><span><i class="fa fa-comments"></i></span> machiko</h1>
+        </div>
+      </div>
+    </header>
+
+<!-- ハンバーガーメニュー -->
+<div id="nav-toggle">
+    <div>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<div id="gloval-nav">
+    <nav>
+        <ul>
+            <li><%= link_to 'トップページ', root_path %></li>
+            <li><%= link_to '新規会員登録', new_user_registration_path %></li>
+            <li><%= link_to 'ログイン', new_user_session_path %></li>
+            <li><%= link_to 'マチコとは', root_path %></li>
+            <li><%= link_to 'お問い合わせ', root_path %></li>
+        </ul>
+    </nav>
+</div>
+<!-- ハンバーガーメニューJS -->
+<script>
+  (function($) {
+    $(function () {
+      $('#nav-toggle').on('click', function() {
+        $('body').toggleClass('open');
+      });
+    });
+})(jQuery);
+</script>
+
+    <%= yield %>
+  </body>
+</html>
