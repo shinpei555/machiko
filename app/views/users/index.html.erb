@@ -1,10 +1,6 @@
 <div class="topPage">
-  <nav class="nav">
-    <ul>
-      <li class="personIcon"><%= link_to(content_tag(:i, "", class: 'fa fa-2x fa-user'), user_path(current_user.id)) %></li>
-
-    </ul>
-  </nav>
+<div class="box">
+</div>
   <div id="tinderslide">
     <ul>
       <% @users.each do |user| %>
@@ -19,8 +15,8 @@
     <div class="noUser">近くに相手がいません</div>
   </div>
   <div class="actions" id="actionBtnArea">
-      <a href="#" class="dislike"><i class="fa fa-times fa-2x"></i></a>
-      <a href="#" class="like"><i class="fa fa-heart fa-2x"></i></a>
+      <a href="#" class="dislike"><i class="fa fa-thumbs-down fa-2x"></i></a>
+      <a href="#" class="like"><i class="fa fa-thumbs-up fa-2x"></i></a>
   </div>
 </div>
 <script>
@@ -68,7 +64,6 @@
     e.preventDefault();
     $("#tinderslide").jTinder($(this).attr('class'));
   });
-
   function checkUserNum() {
     // スワイプするユーザー数とスワイプした回数が同じになればaddClassする
     if (currentUserIndex === usersNum){
@@ -77,4 +72,5 @@
       return;
     }
   }
+
 </script>

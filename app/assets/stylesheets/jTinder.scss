@@ -4,7 +4,10 @@ html, body {
   margin: 0;
   position: relative;
 }
-
+.box {
+  width: 100vw;
+  height: 30px;
+}
 /* Wrapper with padding */
 .wrap  {
   height: 300px;

@@ -11,35 +11,33 @@
     </div>
   </div>
 </div>
-<!-- <div class="page2">
+<div class="page2">
   <div class="contents">
-    <section class="content">
-      <div class="content-image">
-
+    <button type="button" id="modal-open">OPEN</button>
+      <div id="modal-bg"></div>
+      <div id="modal-window">
+      <!-- ここにコンテンツ -->
       </div>
-      <p>テキストテキストテキスト</p>
-    </section>
-
-    <section class="content">
-      <div class="content-image">
-
-      </div>
-      <p>テキストテキストテキスト</p>
-    </section>
-
-    <section class="content">
-      <div class="content-image">
-
-      </div>
-      <p>テキストテキストテキスト</p>
-    </section>
-
-    <section class="content">
-      <div class="content-image">
-
-      </div>
-      <p>テキストテキストテキスト</p>
-    </section>
-
   </div>
-</div> -->
+  <script>
+  $(function(){
+
+  var modalBg = $('#modal-bg');
+  var modalOpen = $('#modal-open');
+  var modalWindow = $('#modal-window');
+
+  modalOpen.on('click', function(){
+    modalBg.fadeIn();
+    modalWindow.fadeIn();
+    $('body').css('overflow', 'hidden');
+  });
+
+  modalBg.on('click', function(){
+    modalBg.fadeOut();
+    modalWindow.fadeOut();
+    $('body').css('overflow', 'auto');
+  });
+
+});
+  </script>
+</div>
